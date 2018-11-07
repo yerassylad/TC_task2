@@ -1,21 +1,10 @@
-# func which returns fib number
-def fibonacci(number)
-  if number == 1 || number == 2
-    1
-  else
-    fibonacci(number - 1) + fibonacci(number - 2)
-  end
+# start array for fib numbers
+arr = [1, 1]
+
+while arr.last < 100
+  arr.push(arr.last(2).sum)
 end
 
-iterator = 1
-fibEnd = 100
-arrOfFibNums = []
+arr.pop
 
-loop do
-  fibNum = fibonacci(iterator)
-  break if fibNum > fibEnd
-  arrOfFibNums.push(fibNum)
-  iterator += 1
-end
-
-p arrOfFibNums
+p arr
