@@ -8,6 +8,6 @@ current_year = Date.today.year
   month_hash[date.strftime("%B").to_sym] = date.day
 end
 
-month_30day = month_hash.select { |month, days| days == 30 }.keys
+month_30day = month_hash.select { |_, days| days == 30 }.keys
 
 puts month_30day

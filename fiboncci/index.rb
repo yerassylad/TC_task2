@@ -1,10 +1,8 @@
 # start array for fib numbers
 arr = [1, 1]
 
-while arr.last < 100
-  arr.push(arr.last(2).sum)
+while (val = arr.last(2).sum) < 100
+  arr.push(val)
 end
-
-arr.pop
 
 p arr
