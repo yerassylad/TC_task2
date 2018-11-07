@@ -1,17 +1,13 @@
 require 'date'
 
-monthHash = {}
-currentYear = Date.today.year
-lastDay = -1
+month_hash = {}
+current_year = Date.today.year
 
 (1..12).each do |month|
-  date = Date.new(currentYear, month, lastDay)
-  monthHash[date.strftime("%B")] = date.day
+  date = Date.new(current_year, month, -1)
+  month_hash[date.strftime("%B").to_sym] = date.day
 end
 
-month30Day = monthHash.select do |month, days|
-  days == 30
-end
-.keys
+month_30day = month_hash.select { |month, days| days == 30 }.keys
 
-puts month30Day
+puts month_30day
