@@ -1,8 +1,8 @@
-vowelsHash = {}
-vowelsReg = /[aeiou]/
+vowels_hash = {}
+vowels_reg = /[aeiou]/
 
-("a"..."z").each_with_index do |letter, index|
-  vowelsHash[letter] = index + 1 if vowelsReg.match(letter)
+("a".."z").each.with_index(1) do |letter, index|
+  vowels_hash[letter] = index if vowels_reg.match(letter)
 end
 
-puts vowelsHash
+puts vowels_hash
